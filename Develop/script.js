@@ -198,7 +198,11 @@ if (options.hasSpecialCharacters) {
     guaranteedCharacters.push(getRandom(lowerCasedCharacters));
   }
 
-
+  /* conditional statement to check if user selected Ok in having upper case letter in the password, if true, adds the uppercase letter and place them inside guaranteedCharacters for joining later */
+ if (options.hasUpperCasedCharacters) {
+    possibleCharacters = possibleCharacters.concat(upperCasedCharacters);
+    guaranteedCharacters.push(getRandom(upperCasedCharacters));
+  }
 
 
 
