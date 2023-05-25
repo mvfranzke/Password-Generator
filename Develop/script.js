@@ -113,8 +113,10 @@ function getPasswordOptions()
     alert('Password length must less than 129 characters');
     return;
   }
-
-
+  /* prompt options whether user wants to include special characters on the password */
+  let hasSpecialCharacters = confirm(
+    'Click OK to confirm including special characters.'
+  );
 
 
 
