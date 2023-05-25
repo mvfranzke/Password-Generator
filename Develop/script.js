@@ -204,7 +204,11 @@ if (options.hasSpecialCharacters) {
     guaranteedCharacters.push(getRandom(upperCasedCharacters));
   }
 
-
+  /*loop to get possible characters based from the count of password length */
+for (let i = 0; i < options.length; i++) {
+    let possibleCharacter = getRandom(possibleCharacters);
+    result.push(possibleCharacter);
+  }
 
 
 
