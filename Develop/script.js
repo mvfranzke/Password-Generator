@@ -172,6 +172,10 @@ function generatePassword() {
 /*  variable to hold stored password while adding other elements*/
   let result = [];
 
+/* variable to hold random character generated- number, upper/lower case and special character to be included on the password */
+  let possibleCharacters = [];
+
+
 
 
 
