@@ -86,7 +86,8 @@ let upperCasedCharacters = [
   "Z",
 ];
 
-
+// List of numeric values to be included in password when used selects Ok to include numbers in the prompt
+let numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 
 
