@@ -90,50 +90,52 @@ let upperCasedCharacters = [
 let numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 
-function getPasswordOptions(){
+function getPasswordOptions() {
   /* variable to store user input on how many characters they want the password to have*/
   let length = parseInt(
-    prompt('How many characters would you like your password to contain? Note: Must be atleast 8 characters '), //added note to input minimum of 8 characters for better security in the prompt screen
+    prompt(
+      "How many characters would you like your password to contain? Note: Must be atleast 8 characters "
+    ), //added note to input minimum of 8 characters for better security in the prompt screen
     10
   );
-    /* checks that user inputs a number in password length, prompts terminate if false */
+  /* checks that user inputs a number in password length, prompts terminate if false */
   if (Number.isNaN(length)) {
-      alert('Password length must be provided as a number');
-      return;
-    }
+    alert("Password length must be provided as a number");
+    return;
+  }
 
-    /* checks that user inputs numbers equal to 8 or above for better security, prompt terminate if false */
+  /* checks that user inputs numbers equal to 8 or above for better security, prompt terminate if false */
   if (length < 8) {
-    alert('Password length must be at least 8 characters');
+    alert("Password length must be at least 8 characters");
     return;
   }
 
   /* checks that user doesn;t exceed 128 max character for password length, terminates if false */
   if (length > 128) {
-    alert('Password length must less than 129 characters');
+    alert("Password length must less than 129 characters");
     return;
   }
   /* prompt options whether user wants to include special characters on the password */
   let hasSpecialCharacters = confirm(
-    'Click OK to confirm including special characters.'
+    "Click OK to confirm including special characters."
   );
 
   /* prompt options whether user wants to include numbers on the password */
   let hasNumericCharacters = confirm(
-    'Click OK to confirm including numeric characters.'
-  ); 
+    "Click OK to confirm including numeric characters."
+  );
 
   /* prompt option whether user wants to include lower-case letters in the password */
   let hasLowerCasedCharacters = confirm(
-    'Click OK to confirm including lowercase characters.'
+    "Click OK to confirm including lowercase characters."
   );
 
   /* prompt option whether user wants to include upper-case letters in the password */
   let hasUpperCasedCharacters = confirm(
-    'Click OK to confirm including uppercase characters.'
+    "Click OK to confirm including uppercase characters."
   );
-  
-  /* conditional statement to check if user selected atleast 1 character type to include in the password, prompt appears when all 4 variable are returned false and terminates */  
+
+  /* conditional statement to check if user selected atleast 1 character type to include in the password, prompt appears when all 4 variable are returned false and terminates */
   if (
     hasSpecialCharacters === false &&
     hasNumericCharacters === false &&
@@ -154,14 +156,6 @@ function getPasswordOptions(){
   };
 
   return passwordOptions;
-}
-
-
-function getRandom(arr) {
-  let randIndex = Math.floor(Math.random() * arr.length);
-  let randElement = arr[randIndex];
-
-  return randElement;
 }
 
 
