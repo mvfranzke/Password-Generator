@@ -93,13 +93,20 @@ let numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 function getPasswordOptions()
   // variable to store user input on how many characters they want the password to have
   let length = parseInt(
-    prompt('How many characters would you like your password to contain? Note: Must be atleast 8 characters '), //added note to input minimum of 8 characters for better security
+    prompt('How many characters would you like your password to contain? Note: Must be atleast 8 characters '), //added note to input minimum of 8 characters for better security in the prompt screen
     10
   );
+    /* checks that user inputs a number in password length, prompts terminate if false */
+  if (Number.isNaN(length)) {
+      alert('Password length must be provided as a number');
+      return;
+    }
 
 
-
-
+  if (length < 8) {
+    alert('Password length must be at least 8 characters');
+    return;
+  }
 
 
 
