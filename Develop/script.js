@@ -26,6 +26,11 @@ var specialCharacters = [
 ];
 
 
+/* List of numbers to be included on the password when user asnwers Ok to include numberic values on the prompt */
+let numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+
+
 
 
 
