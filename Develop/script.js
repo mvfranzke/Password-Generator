@@ -123,6 +123,10 @@ function getPasswordOptions()
     'Click OK to confirm including numeric characters.'
   ); 
 
+  /* prompt option whether user wants to include lower-case letters in the password */
+  let hasLowerCasedCharacters = confirm(
+    'Click OK to confirm including lowercase characters.'
+  );
 
 
 
