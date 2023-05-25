@@ -158,6 +158,13 @@ function getPasswordOptions() {
   return passwordOptions;
 }
 
+/* function to generate random items from the array - number, uppercase, lowercase letters and special characters */
+function getRandom(arr) {
+  let randIndex = Math.floor(Math.random() * arr.length);
+  let randElement = arr[randIndex];
+
+  return randElement;
+}
 
 
 
