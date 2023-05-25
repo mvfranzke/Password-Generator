@@ -90,8 +90,8 @@ let upperCasedCharacters = [
 let numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 
-function getPasswordOptions()
-  // variable to store user input on how many characters they want the password to have
+function getPasswordOptions(){
+  /* variable to store user input on how many characters they want the password to have*/
   let length = parseInt(
     prompt('How many characters would you like your password to contain? Note: Must be atleast 8 characters '), //added note to input minimum of 8 characters for better security in the prompt screen
     10
@@ -132,9 +132,37 @@ function getPasswordOptions()
   let hasUpperCasedCharacters = confirm(
     'Click OK to confirm including uppercase characters.'
   );
+  
+  /* conditional statement to check if user selected atleast 1 character type to include in the password, prompt appears when all 4 variable are returned false and terminates */  
+  if (
+    hasSpecialCharacters === false &&
+    hasNumericCharacters === false &&
+    hasLowerCasedCharacters === false &&
+    hasUpperCasedCharacters === false
+  ) {
+    alert("Atleast one character type must be selected");
+    return;
+  }
+
+  /* object to store user inputs on password length, if to include special characters, numbers, lower and or uppercase letters */
+  let passwordOptions = {
+    length: length,
+    hasSpecialCharacters: hasSpecialCharacters,
+    hasNumericCharacters: hasNumericCharacters,
+    hasLowerCasedCharacters: hasLowerCasedCharacters,
+    hasUpperCasedCharacters: hasUpperCasedCharacters,
+  };
+
+  return passwordOptions;
+}
 
 
+function getRandom(arr) {
+  let randIndex = Math.floor(Math.random() * arr.length);
+  let randElement = arr[randIndex];
 
+  return randElement;
+}
 
 
 
