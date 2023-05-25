@@ -180,16 +180,17 @@ function generatePassword() {
 /* terminates the function if options doesnt exist */
 if (!options) return;
 
-/* conditional statement to check if user selected Ok in having special characters, if true , adds the special character on the password */
+/* conditional statement to check if user selected Ok in having special characters, if true , adds the and place them inside guaranteedCharacters for joining  */
 if (options.hasSpecialCharacters) {
     possibleCharacters = possibleCharacters.concat(specialCharacters);
     guaranteedCharacters.push(getRandom(specialCharacters));
   }
 
-
-
-
-
+/* conditional statement to check if user selected Ok in having numberic value, if true , adds the numberic value and place them inside guaranteedCharacters for joining */
+  if (options.hasNumericCharacters) {
+    possibleCharacters = possibleCharacters.concat(numericCharacters);
+    guaranteedCharacters.push(getRandom(numericCharacters));
+  }
 
 
 
