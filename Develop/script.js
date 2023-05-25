@@ -102,7 +102,7 @@ function getPasswordOptions()
       return;
     }
 
-
+    /* checks that user inputs numbers equal to 8 or above for better security, prompt terminate if false */
   if (length < 8) {
     alert('Password length must be at least 8 characters');
     return;
