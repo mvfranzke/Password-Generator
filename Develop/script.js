@@ -25,6 +25,55 @@ var specialCharacters = [
   ".",
 ];
 
+/* List of lower case letters to be used when user selects Ok to include lower case alphabet in the prompt */
+let lowerCasedCharacters = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* List of numbers to be included on the password when user asnwers Ok to include numberic values on the prompt */
 let numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
