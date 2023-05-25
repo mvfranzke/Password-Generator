@@ -108,7 +108,11 @@ function getPasswordOptions()
     return;
   }
 
-
+  /* checks that user doesn;t exceed 128 max character for password length, terminates if false */
+  if (length > 128) {
+    alert('Password length must less than 129 characters');
+    return;
+  }
 
 
 
