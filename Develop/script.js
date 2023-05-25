@@ -56,6 +56,36 @@ let lowerCasedCharacters = [
 ];
 
 
+/* List of upper case letters to be used when user answers Ok in including upper case letters in the prompt */
+let upperCasedCharacters = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
+
 
 
 
