@@ -209,3 +209,25 @@ function generatePassword() {
     let possibleCharacter = getRandom(possibleCharacters);
     result.push(possibleCharacter);
   }
+
+  /* adds minimum of atleast 1 character in the result */
+  for (let i = 0; i < guaranteedCharacters.length; i++) {
+    result[i] = guaranteedCharacters[i];
+  }
+  return result.join("");
+}
+
+/* represents the button in html for generating password with id of generate  */
+let generateBtn = document.querySelector("#generate");
+
+/*returns the final generated password back in html to appear inside the text area */
+function writePassword() {
+  let password = generatePassword();
+  let passwordText = document.querySelector("#password");
+  passwordText.value = password;
+}
+
+/* when generate password button is clicked it will run writePassword function to show the password in text area */
+generateBtn.addEventListener("click", writePassword);
+
+
