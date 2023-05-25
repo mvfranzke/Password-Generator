@@ -1,9 +1,11 @@
+/* universal style for the document */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* style for html and body portion */
 html,
 body,
 .wrapper {
@@ -12,11 +14,13 @@ body,
   padding: 0;
 }
 
+/* style applied for body */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/* margin */
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
@@ -118,6 +122,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* mobile first design, ensure items appear or flow correctly as device screen size change */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;

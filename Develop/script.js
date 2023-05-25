@@ -1,5 +1,5 @@
 /* List of special charaters to be included in password when user answers Ok to include special character on the prompt */
-var specialCharacters = [
+let specialCharacters = [
   "@",
   "%",
   "+",
@@ -88,7 +88,8 @@ let upperCasedCharacters = [
 
 // List of numeric values to be included in password when used selects Ok to include numbers in the prompt
 let numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-
+/* represents the button in html for generating password with id of generate  */
+let generateBtn = document.querySelector("#generate");
 
 function getPasswordOptions() {
   /* variable to store user input on how many characters they want the password to have*/
@@ -96,7 +97,9 @@ function getPasswordOptions() {
     prompt(
       "How many characters would you like your password to contain? Note: Must be atleast 8 characters "
     ), //added note to input minimum of 8 characters for better security in the prompt screen
-    10
+    10,
+      
+  
   );
   /* checks that user inputs a number in password length, prompts terminate if false */
   if (Number.isNaN(length)) {
@@ -217,9 +220,6 @@ function generatePassword() {
   return result.join("");
 }
 
-/* represents the button in html for generating password with id of generate  */
-let generateBtn = document.querySelector("#generate");
-
 /*returns the final generated password back in html to appear inside the text area */
 function writePassword() {
   let password = generatePassword();
@@ -229,5 +229,3 @@ function writePassword() {
 
 /* when generate password button is clicked it will run writePassword function to show the password in text area */
 generateBtn.addEventListener("click", writePassword);
-
-
