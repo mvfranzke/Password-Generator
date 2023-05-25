@@ -90,6 +90,12 @@ let upperCasedCharacters = [
 let numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 
+function getPasswordOptions()
+  // variable to store user input on how many characters they want the password to have
+  let length = parseInt(
+    prompt('How many characters would you like your password to contain? Note: Must be atleast 8 characters '), //added note to input minimum of 8 characters for better security
+    10
+  );
 
 
 
@@ -106,8 +112,40 @@ let numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 
 
-/* List of numbers to be included on the password when user asnwers Ok to include numberic values on the prompt */
-let numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
