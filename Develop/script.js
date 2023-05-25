@@ -128,7 +128,10 @@ function getPasswordOptions()
     'Click OK to confirm including lowercase characters.'
   );
 
-
+  /* prompt option whether user wants to include upper-case letters in the password */
+  let hasUpperCasedCharacters = confirm(
+    'Click OK to confirm including uppercase characters.'
+  );
 
 
 
