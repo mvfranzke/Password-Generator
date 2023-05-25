@@ -118,7 +118,10 @@ function getPasswordOptions()
     'Click OK to confirm including special characters.'
   );
 
-
+  /* prompt options whether user wants to include numbers on the password */
+  let hasNumericCharacters = confirm(
+    'Click OK to confirm including numeric characters.'
+  ); 
 
 
 
