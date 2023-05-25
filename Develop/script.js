@@ -169,74 +169,43 @@ function getRandom(arr) {
 /* function to run when generating password based from users input on previous prompts */
 function generatePassword() {
   let options = getPasswordOptions();
-/*  variable to hold stored password while adding other elements*/
+  /*  variable to hold stored password while adding other elements*/
   let result = [];
 
-/* variable to hold random character generated- number, upper/lower case and special character to be included on the password */
+  /* variable to hold random character generated- number, upper/lower case and special character to be included on the password */
   let possibleCharacters = [];
 
-/* variable to hold character from possibleCharacters function to be added on final password */ 
+  /* variable to hold character from possibleCharacters function to be added on final password */
   let guaranteedCharacters = [];
-/* terminates the function if options doesnt exist */
-if (!options) return;
+  /* terminates the function if options doesnt exist */
+  if (!options) return;
 
-/* conditional statement to check if user selected Ok in having special characters, if true , adds the and place them inside guaranteedCharacters for joining  */
-if (options.hasSpecialCharacters) {
+  /* conditional statement to check if user selected Ok in having special characters, if true , adds the and place them inside guaranteedCharacters for joining  */
+  if (options.hasSpecialCharacters) {
     possibleCharacters = possibleCharacters.concat(specialCharacters);
     guaranteedCharacters.push(getRandom(specialCharacters));
   }
 
-/* conditional statement to check if user selected Ok in having numberic value, if true , adds the numberic value and place them inside guaranteedCharacters for joining */
+  /* conditional statement to check if user selected Ok in having numberic value, if true , adds the numberic value and place them inside guaranteedCharacters for joining */
   if (options.hasNumericCharacters) {
     possibleCharacters = possibleCharacters.concat(numericCharacters);
     guaranteedCharacters.push(getRandom(numericCharacters));
   }
 
   /* conditional statement to check if user selected Ok in having lower case letters in password, if true , adds the lower case value and place them inside guranteedCharacters for joining later */
- if (options.hasLowerCasedCharacters) {
+  if (options.hasLowerCasedCharacters) {
     possibleCharacters = possibleCharacters.concat(lowerCasedCharacters);
     guaranteedCharacters.push(getRandom(lowerCasedCharacters));
   }
 
   /* conditional statement to check if user selected Ok in having upper case letter in the password, if true, adds the uppercase letter and place them inside guaranteedCharacters for joining later */
- if (options.hasUpperCasedCharacters) {
+  if (options.hasUpperCasedCharacters) {
     possibleCharacters = possibleCharacters.concat(upperCasedCharacters);
     guaranteedCharacters.push(getRandom(upperCasedCharacters));
   }
 
   /*loop to get possible characters based from the count of password length */
-for (let i = 0; i < options.length; i++) {
+  for (let i = 0; i < options.length; i++) {
     let possibleCharacter = getRandom(possibleCharacters);
     result.push(possibleCharacter);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
-
-
