@@ -192,6 +192,11 @@ if (options.hasSpecialCharacters) {
     guaranteedCharacters.push(getRandom(numericCharacters));
   }
 
+  /* conditional statement to check if user selected Ok in having lower case letters in password, if true , adds the lower case value and place them inside guranteedCharacters for joining later */
+ if (options.hasLowerCasedCharacters) {
+    possibleCharacters = possibleCharacters.concat(lowerCasedCharacters);
+    guaranteedCharacters.push(getRandom(lowerCasedCharacters));
+  }
 
 
 
