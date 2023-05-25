@@ -166,6 +166,11 @@ function getRandom(arr) {
   return randElement;
 }
 
+/* function to run when generating password based from users input on previous prompts */
+function generatePassword() {
+  let options = getPasswordOptions();
+/*  variable to hold stored password while adding other elements*/
+  let result = [];
 
 
 
