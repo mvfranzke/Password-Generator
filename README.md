@@ -8,7 +8,7 @@ N/A
 ## Usage
 URL of deployed application : https://mvfranzke.github.io/Module-1-Challenge/
 
-URL of Github repository : https://github.com/mvfranzke/Module-1-Challenge
+URL of Github repository : https://github.com/mvfranzke/Password-Generator
 
 Screenshot of deployed application can be found here:
 
