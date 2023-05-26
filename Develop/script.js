@@ -91,6 +91,7 @@ let numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 /* represents the button in html for generating password with id of generate  */
 let generateBtn = document.querySelector("#generate");
 
+
 function getPasswordOptions() {
   /* variable to store user input on how many characters they want the password to have*/
   let length = parseInt(
@@ -227,5 +228,8 @@ function writePassword() {
   passwordText.value = password;
 }
 
+
 /* when generate password button is clicked it will run writePassword function to show the password in text area */
 generateBtn.addEventListener("click", writePassword);
+
+  
