@@ -10,7 +10,7 @@ URL of deployed application :
 
 URL of Github repository : https://github.com/mvfranzke/Password-Generator
 
-Screenshot of deployed application can be found here:
+Screenshot of deployed application can be found here: ![alt text](./Image/screenshot%20of%20deployed%20project.jpg)
 
 ## Credits
 N/A
