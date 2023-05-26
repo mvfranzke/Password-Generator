@@ -6,7 +6,7 @@ This is the third assignment or challenge for our bootcamp class, we're given a 
 N/A
 
 ## Usage
-URL of deployed application : 
+URL of deployed application : https://mvfranzke.github.io/Password-Generator/
 
 URL of Github repository : https://github.com/mvfranzke/Password-Generator
 
